@@ -1,4 +1,4 @@
-const API_URL = "http://localhost:5000/api";
+const API_URL = import.meta.env.VITE_API_URL || "http://localhost:5000/api";
 
 export async function apiRequest(endpoint: string, options: RequestInit = {}) {
     const token = localStorage.getItem("token");
@@ -21,8 +21,10 @@ export async function apiRequest(endpoint: string, options: RequestInit = {}) {
     }
 
     if (!response.ok) {
-        throw new Error(data.message || "Erreur API");
+        throw new Error(data.message || data.erreur || "Erreur API");
     }
 
     return data;
 }
+
+export { API_URL };

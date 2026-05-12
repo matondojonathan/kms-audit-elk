@@ -11,6 +11,8 @@ import {
     Activity,
 } from "lucide-react";
 
+import { API_URL } from "../services/api";
+
 export default function Login() {
 
     const navigate = useNavigate();
@@ -33,7 +35,7 @@ export default function Login() {
         try {
 
             const response = await fetch(
-                "http://localhost:5000/api/auth/login",
+                `${API_URL}/auth/login`,
                 {
                     method: "POST",
                     headers: {
@@ -75,7 +77,7 @@ export default function Login() {
 
         <div className="min-h-screen flex flex-col justify-between bg-gradient-to-br from-slate-950 via-slate-900 to-blue-950 overflow-hidden">
 
-            {/* BACKGROUND EFFECT */}
+            {/* BACKGROUND */}
             <div className="absolute inset-0 opacity-10">
 
                 <div className="absolute top-20 left-20 w-72 h-72 bg-blue-500 rounded-full blur-3xl"></div>
@@ -89,7 +91,7 @@ export default function Login() {
 
                 <div className="grid grid-cols-1 xl:grid-cols-2 gap-10 w-full max-w-7xl">
 
-                    {/* LEFT PANEL */}
+                    {/* LEFT SIDE */}
                     <div className="hidden xl:flex flex-col justify-center">
 
                         <div className="mb-10">
@@ -101,6 +103,7 @@ export default function Login() {
                                 </div>
 
                                 <div>
+
                                     <h1 className="text-5xl font-bold text-white">
                                         KMS Audit ELK
                                     </h1>
@@ -108,6 +111,7 @@ export default function Login() {
                                     <p className="text-slate-400 mt-2 text-lg">
                                         Plateforme sécurisée de gestion de clés cryptographiques
                                     </p>
+
                                 </div>
 
                             </div>
@@ -126,6 +130,7 @@ export default function Login() {
                                 <ShieldCheck className="text-green-400 mt-1" />
 
                                 <div>
+
                                     <h3 className="text-white font-semibold mb-1">
                                         Authentification sécurisée
                                     </h3>
@@ -133,6 +138,7 @@ export default function Login() {
                                     <p className="text-slate-400 text-sm">
                                         JWT + bcrypt + contrôle RBAC.
                                     </p>
+
                                 </div>
 
                             </div>
@@ -142,6 +148,7 @@ export default function Login() {
                                 <Database className="text-blue-400 mt-1" />
 
                                 <div>
+
                                     <h3 className="text-white font-semibold mb-1">
                                         Gestion des clés
                                     </h3>
@@ -149,6 +156,7 @@ export default function Login() {
                                     <p className="text-slate-400 text-sm">
                                         AES-256, RSA-2048, ECC et supervision avancée.
                                     </p>
+
                                 </div>
 
                             </div>
@@ -158,6 +166,7 @@ export default function Login() {
                                 <Activity className="text-purple-400 mt-1" />
 
                                 <div>
+
                                     <h3 className="text-white font-semibold mb-1">
                                         Audit ELK
                                     </h3>
@@ -165,6 +174,7 @@ export default function Login() {
                                     <p className="text-slate-400 text-sm">
                                         Centralisation et traçabilité des événements sécurité.
                                     </p>
+
                                 </div>
 
                             </div>
