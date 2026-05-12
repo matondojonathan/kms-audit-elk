@@ -1,0 +1,15 @@
+{
+    "projet": "KMS Audit ELK",
+    "source": "backend-nodejs",
+    "environnement": "local",
+    "id_journal": 1,
+    "id_utilisateur": 1,
+    "nom_utilisateur": "admin",
+    "action": "creation_cle",
+    "type_cible": "cle",
+    "id_cible": 2,
+    "adresse_ip": "::1",
+    "resultat": "succes",
+    "details": "Clé cle_factures_2026 créée",
+    "horodatage": "2026-04-25T18:16:49.000Z"
+}
